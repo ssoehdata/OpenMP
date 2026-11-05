@@ -5,4 +5,4 @@ Working through resources to learn OpenMP
 
 ### The OpenMP Common Core, Mattson et al
 
-![alt_text](https://github.com/ssoehdata/C_Learning/blob/main/C_logo.jpg)
+![alt_text](https://github.com/ssoehdata/OpenMP/blob/main/logo.jpg)
