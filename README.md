@@ -5,4 +5,4 @@ Working through resources to learn OpenMP
 ### OpenMP API spec 6.0 
 ### The OpenMP Common Core, Mattson et al
 
-![alt_text](https://github.com/ssoehdata/OpenMP/blob/main/logo.jpg)
+![alt_text](https://https://github.com/ssoehdata/OpenMP/blob/main/OpenMP/logo.jpg) 
