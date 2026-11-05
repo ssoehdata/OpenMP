@@ -5,5 +5,6 @@ Working through resources to learn OpenMP
 ### OpenMP API spec 6.0 
 ### The OpenMP Common Core, Mattson et al
 ### Using OpenMP, Chapman et al
+### Parallel Programming in OpenMP, Chandra et al
 ![alt_text](https://github.com/ssoehdata/OpenMP/blob/main/OpenMPLogo.jpg) 
 
