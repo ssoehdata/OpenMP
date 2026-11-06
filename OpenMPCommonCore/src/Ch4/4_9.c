@@ -1,7 +1,18 @@
+/* 
+  fig 4_9.c page 66 
+  Padded sum array numerical integration
+  	- the sum array padded to fill an L1 cache with
+	  the extra dimension and put subsequent rows
+	  of sum, i.e., each sum[id][0], on different
+	  cache lines.
+*/
+
+
 #include<stdio.h> 
 #include<omp.h> 
 
 #define NTHREADS 4
+#define CBLK	 8
 
 static long num_steps = 1000000000;
 double step;
@@ -9,7 +20,7 @@ int main()
 {
 	int i, j, actual_nthreads;
 	double pi, start_time, run_time;
-	double sum[NTHREADS] = {0.0};
+	double sum[NTHREADS][CBLK]={0.0};
 
 	step = 1.0 / (double) num_steps;
 
@@ -27,12 +38,12 @@ int main()
 
 		for (i = id; i < num_steps; i += numthreads) {
 			x = ( i + 0.5) * step;
-			sum[id] += 4.0 / (1.0 + x * x);
+			sum[id][0] += 4.0 / (1.0 + x * x);
 		}
 	} // end of parallel region
 	pi = 0.0;
 	for (i = 0; i < actual_nthreads; i++)
-		pi += sum[i];
+		pi += sum[i][0];
 
 	pi = step * pi;
 	run_time = omp_get_wtime() - start_time;
