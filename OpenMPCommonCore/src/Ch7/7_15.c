@@ -1,3 +1,12 @@
+/*
+	Fig 7.15 page 142
+		Parallel Pi program using tasks.
+			Accomplished with the divide and conquer
+			pattern by splitting the problem into two 
+			subtasks to calculate sum1 and sum2, recursively
+			solving each task, and then combining the results.
+*/
+
 #include<stdio.h> 
 static long num_steps = 1024*1024*1024;
 #define MIN_BLK 1024*256
